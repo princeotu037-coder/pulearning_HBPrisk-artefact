@@ -173,10 +173,7 @@ for name, (y_pred, y_probs) in tuned_models.items():
           f"F1-score: {f1_score(y_test, y_pred):.4f} | "
           f"AUC: {roc_auc_score(y_test, y_probs):.4f}")
 
-
-
 import joblib
-
 # Save the trained Biased SVM model
 joblib.dump(best_svm, "biased_svm_hbp.pkl")
 
