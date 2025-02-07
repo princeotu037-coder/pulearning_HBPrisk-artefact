@@ -3,7 +3,7 @@ loaded_model = joblib.load("biased_svm_model.pkl")
 loaded_scaler = joblib.load("scaler.pkl")
 loaded_alpha = joblib.load("alpha_hat.pkl")
 
-print("✅ Model, scaler, and alpha loaded successfully!")
+print("Model, scaler, and alpha loaded successfully!")
 
 # Simulating a new patient's data (replace with real input values)
 # Ensure the number of features matches the training data
