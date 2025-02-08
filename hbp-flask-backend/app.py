@@ -5,19 +5,29 @@ import numpy as np
 app = Flask(__name__)
 
 # Load the trained Biased SVM model, scaler, and alpha
-model = joblib.load("biased_svm_model.pkl")
-scaler = joblib.load("scaler.pkl")
-alpha_hat = joblib.load("alpha_hat.pkl")
+try:
+    model = joblib.load("biased_svm_model.pkl")
+    scaler = joblib.load("scaler.pkl")
+    alpha_hat = joblib.load("alpha_hat.pkl")
+except Exception as e:
+    print(f"Error loading model or scaler: {e}")
+    model, scaler, alpha_hat = None, None, None
 
-@app.route('/')
+@app.route("/", methods=["GET"])
 def home():
     return "HBP Risk Prediction API is Running!"
 
-@app.route('/predict', methods=['POST'])
+@app.route("/predict", methods=["POST"])
 def predict():
     try:
+        if model is None or scaler is None or alpha_hat is None:
+            return jsonify({"error": "Model or scaler not loaded properly"}), 500
+
         # Get JSON data from request
         data = request.get_json()
+        if "features" not in data:
+            return jsonify({"error": "Missing 'features' key in request"}), 400
+        
         features = np.array(data["features"]).reshape(1, -1)  # Ensure correct shape
 
         # Check feature consistency
@@ -50,5 +60,5 @@ def predict():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
