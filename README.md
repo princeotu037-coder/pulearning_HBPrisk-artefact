@@ -15,3 +15,16 @@ This project is a **Flask API** that predicts the risk of **Hypertension (HBP)**
 ---
 
 ## 📂 Project Structure
+
+---
+
+## 🛠 Installation & Setup
+
+### **1️⃣ Install Dependencies**
+Make sure you have **Python 3.8+** installed, then install the required packages:
+
+```sh
+pip install -r requirements.txt
+
+
+---
