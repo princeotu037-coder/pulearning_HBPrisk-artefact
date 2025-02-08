@@ -16,6 +16,8 @@ This project is a **Flask API** that predicts the risk of **Hypertension (HBP)**
 
 ## 📂 Project Structure
 
+HBP-Risk-Prediction/ │── model/ # Contains trained Biased SVM model │ ├── scaler.pkl # StandardScaler for feature normalization │ ├── biased_svm.pkl # Saved Biased SVM model │ │── app.py # Flask API backend │── requirements.txt # Dependencies for the project │── README.md # Documentation (this file) │── dataset_HBP00.csv # Original dataset (if applicable) │── test_request.json # Sample input for Postman testing
+
 ---
 
 ## 🛠 Installation & Setup
