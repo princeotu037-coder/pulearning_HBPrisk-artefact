@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn hbp-flask-backend.app:app
