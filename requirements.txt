@@ -1,0 +1,11 @@
+## install packages
+
+flask
+numpy
+pandas
+scikit-learn
+matplotlib
+joblib
+krippendorff
+statsmodels
+gunicorn
