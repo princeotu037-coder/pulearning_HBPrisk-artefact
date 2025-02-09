@@ -16,7 +16,24 @@ This project is a **Flask API** that predicts the risk of **Hypertension (HBP)**
 
 ## 📂 Project Structure
 
-HBP-Risk-Prediction/ │── model/ # Contains trained Biased SVM model │ ├── scaler.pkl # StandardScaler for feature normalization │ ├── biased_svm.pkl # Saved Biased SVM model │ │── app.py # Flask API backend │── requirements.txt # Dependencies for the project │── README.md │── test_request.json # Sample input for Postman testing
+pulearning_HBPrisk-artefact/
+│── hbp-flask-backend/  # Backend (Flask API)
+│   ├── app.py          # Flask API
+│   ├── biased_svm_model.pkl  # Trained Model
+│   ├── scaler.pkl      # StandardScaler object
+│   ├── alpha_hat.pkl   # Class Prior Estimation
+│   ├── requirements.txt # Dependencies
+│   ├── Procfile        # Render Deployment Config
+│── hbp-frontend_1/     # Frontend (React)
+│   ├── src/            # React Source Code
+│   │   ├── components/ # UI Components
+│   │   ├── styles/     # CSS Files
+│   │   ├── App.jsx     # Main App
+│   │   ├── main.jsx    # React DOM Entry
+│   ├── index.html      # Main HTML
+│   ├── package.json    # Frontend Dependencies
+│── README.md           # Project Documentation
+
 
 ---
 
