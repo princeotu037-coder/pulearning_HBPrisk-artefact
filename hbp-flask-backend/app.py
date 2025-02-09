@@ -45,11 +45,11 @@ def predict():
 
         # Categorize risk level
         if probability >= 0.8:
-            risk_level = "High Risk"
+            risk_level = "High Risk (Hypertensive)"
         elif probability >= 0.7:
-            risk_level = "Medium Risk"
+            risk_level = "Medium High Risk (Hypertensive)"
         elif probability >= 0.5:
-            risk_level = "Low Risk"
+            risk_level = "Mild Risk (Needs Monitoring)"
         else:
             risk_level = "Very Low Risk"
 

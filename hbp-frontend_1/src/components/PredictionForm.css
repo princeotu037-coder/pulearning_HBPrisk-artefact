@@ -1,0 +1,82 @@
+/* ========== FORM CONTAINER ========== */
+.form-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ========== HEADINGS & TEXT ========== */
+h2 {
+  color: #083864;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* ========== GRID LAYOUT ========== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 15px 30px; /* 15px row gap, 30px column gap */
+  margin-bottom: 20px;
+  padding: 0 4px; 
+}
+
+/* ========== INPUT BOX ========== */
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.input-box label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box; 
+}
+
+/* ========== BUTTON STYLING ========== */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #169bbd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #1c8065;
+}
+
+/* ========== RESULT BOX ========== */
+.result-box {
+  margin-top: 20px;
+  padding: 10px;
+  background: #e2b82d;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
