@@ -8,7 +8,7 @@ Project presents a **Hypertension (HBP) Risk Prediction System** using **Positiv
 
 - **Machine Learning Model** – Biased SVM trained to predict hypertension risk.  
 - **Backend (Flask API)** – Serves real-time predictions.  
-- **Frontend (React + Tailwind CSS)** – Web-based interface for user-friendly input.  
+- **Frontend (React.js + Tailwind CSS)** – Web-based interface for user-friendly input.  
 - **Deployment** – Flask API on **Render**, Frontend on **Cloudflare Pages**.  
 
 🚀 **Live Demo:**  
