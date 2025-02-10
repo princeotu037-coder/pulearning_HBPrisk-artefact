@@ -1,8 +1,7 @@
 # **HBP Risk Prediction – PU Learning Model**  
 
 [![API Status](https://img.shields.io/website?url=https://pulearning-hbp-risk.onrender.com)](https://pulearning-hbp-risk.onrender.com) 
-[![Frontend Status](https://img.shields.io/website?url=https://pulearning-hbprisk-artefact.pages.dev)](https://pulearning-hbprisk-artefact.pages.dev)  
-[![MIT License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  
+[![Frontend Status](https://img.shields.io/website?url=https://pulearning-hbprisk-artefact.pages.dev)](https://pulearning-hbprisk-artefact.pages.dev) [![MIT License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  
 
 ## **Overview**  
 
@@ -21,7 +20,7 @@ This project presents a **Hypertension (HBP) Risk Prediction System** using **Po
 
 ## **Tech Stack**  
 
-| Component  | Technology Used  |
+| **Component**  | Technology Used  |
 |------------|----------------|
 | **Machine Learning** | Python, Scikit-learn (Biased SVM) |
 | **Backend** | Flask, Flask-CORS, Gunicorn |
@@ -33,35 +32,28 @@ This project presents a **Hypertension (HBP) Risk Prediction System** using **Po
 
 ---
 
-## **🔬 Machine Learning Approach**  
+## **PU Learning (Biased SVM Model)**  
 
-### **1️⃣ PU Learning (Biased SVM Model)**  
-- Instead of traditional supervised learning, this model learns from **Positive (HBP cases)** and **Unlabeled (PU) data**, where negative cases are uncertain.  
+- Instead of traditional supervised learning, this model learns from **Positive (HBP cases)** and **Unlabeled (PU) data**, where negative cases are uncertain.  Weighted logistic pu learning as well as Pu bagging were trained but Biased svm showed robust results with prediction and was therefore chosen.
 - **Biased SVM** assigns lower importance to unlabeled data to improve classification accuracy.  
 
-### **2️⃣ Feature Engineering**  
-- Inputs include **12 medical parameters** such as **Age, BMI, BP, Cholesterol, Glucose, and Heart Rate**.  
-- Data is **standardized** using **StandardScaler** to ensure optimal model performance.  
-
-### **3️⃣ Risk Prediction & Categorization**  
-- The model outputs a **Hypertension Risk Probability**.  
-- The **Risk Levels** are categorized as:  
-  - **Very Low Risk** (< 0.5)  
-  - **Mild Risk** (0.5 – 0.7)  
-  - **Moderate Risk** (0.7 – 0.8)  
-  - **High Risk** (> 0.8)  
 
 ---
 
-## **🚀 Deployment & API Usage**  
+## **🚀 Deployment & API Usage** 
 
-### **1️⃣ Flask API Deployment (Render)**  
+### ** API Request
 - The backend is deployed on **Render** with the API endpoint:  
   **`https://pulearning-hbp-risk.onrender.com/predict`**  
 - The API accepts **POST requests** with JSON data in this format:  
   ```json
   {
-      "features": [1, 39, 27, 0, 0, 0, 195, 115, 106, 80, 70, 77]
+      "features": [1, 52, 29, 0, 0, 0, 240, 115, 132, 84, 70, 77]
   }
- 
-
+  
+### ** API Response **
+```json
+{
+    "HBP Risk Probability": 0.81,
+    "Risk Level": "High Risk (Hypertensive)"
+}
