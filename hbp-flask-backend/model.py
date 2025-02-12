@@ -173,12 +173,28 @@ for name, (y_pred, y_probs) in tuned_models.items():
           f"F1-score: {f1_score(y_test, y_pred):.4f} | "
           f"AUC: {roc_auc_score(y_test, y_probs):.4f}")
 
+
+
 import joblib
+
+# Define filenames
+model_filename = "biased_svm_model.pkl"
+scaler_filename = "scaler.pkl"
+alpha_filename = "alpha_hat.pkl"
+
 # Save the trained Biased SVM model
-joblib.dump(best_svm, "biased_svm_hbp.pkl")
+joblib.dump(best_svm, model_filename)
 
-# Save the scaler used for feature standardization
-joblib.dump(scaler, "scaler.pkl")
+# Save the scaler used for feature normalization
+joblib.dump(scaler, scaler_filename)
 
-print("✅ Biased SVM model and scaler saved successfully!")
+# Save the estimated class prior (α)
+joblib.dump(alpha_hat, alpha_filename)
+
+print("Biased SVM model, scaler, and alpha value saved successfully!")
+
+
+#os.chdir('C:\\Users\\dowus\\Dropbox\\Github Files\\HBP Risk Prediction - Artefact\\pulearning_HBPrisk-artefact\\hbp-flask-backend')
+#os.chdir('C:\\Users\\dowus\\Dropbox\\Github Files\\HBP Risk Prediction - Artefact\\pulearning_HBPrisk-artefact')
+
 
