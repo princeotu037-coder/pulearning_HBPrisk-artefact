@@ -14,7 +14,7 @@ Project presents a **Hypertension (HBP) Risk Prediction System** using **Positiv
 🚀 **Live Demo:**  
 - **Frontend**: [HBP Risk Prediction](https://pulearning-hbprisk-artefact.pages.dev/)  
 - **API Endpoint**: [HBP Risk API](https://pulearning-hbp-risk.onrender.com)  
-
+- **Info**: API endpoint is hosted on a free server and so first time running of the frontend app takes a while to load.
 
 ## **PU Learning (Biased SVM Model)**  
 
